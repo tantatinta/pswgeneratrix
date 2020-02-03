@@ -45,9 +45,15 @@ function generatePsw(x) {
         var randomItem = "";
   for (k = 0; k < preferredLength; k++) {
   randomItem += varHolder[Math.floor(Math.random() * varHolder.length)];    
+
+  //this is what i had, without the randomItem var in line 45
+  //var randomItem = varHolder[Math.floor(Math.random() * varHolder.length)];
+  
+  console.log(randomItem);
      
   }
   writePassword(randomItem);
+
   }
 
 // Write password to the #password input
