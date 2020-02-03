@@ -42,18 +42,17 @@ function generatePsw(x) {
           generatePsw();
         }
 
-
+        var randomItem = "";
   for (k = 0; k < preferredLength; k++) {
-    var randomItem = varHolder[Math.floor(Math.random() * varHolder.length)];    
-          
-    alert(randomItem);   
+  randomItem += varHolder[Math.floor(Math.random() * varHolder.length)];    
+     
   }
-  writePassword();
+  writePassword(randomItem);
   }
 
 // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
+function writePassword(password) {
+  // var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
